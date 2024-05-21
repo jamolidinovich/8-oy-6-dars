@@ -20,6 +20,7 @@ function Main() {
       })
       .then((d) => {
         setData(d.playlists.items);
+        console.log(d);
       })
       .catch((err) => {
         setError(err);
@@ -40,12 +41,12 @@ function Main() {
   return (
     <div className="relative">
       <div className=" ">
-        <div className=" justify-center relative gap-10 w-[100%] bg-[#121212] flex flex-wrap pt-[100px] ">
+        <div className=" justify-center relative gap-10 h-[100%] w-[100%] bg-[#121212] flex flex-wrap pt-[100px] ">
           {data.map((el, index) => (
             <div el={el} key={index} className="gap-4 ">
               <div
                 onClick={() => handleMusic(el.id, el)}
-                className="w-[224px] p-5 rounded-lg  h-[324px] bg-[#1B1B1B] text-[#B3B3B3]"
+                className="w-[224px] p-5 rounded-lg  h-[354px] bg-[#1B1B1B] text-[#B3B3B3]"
               >
                 <img
                   src={el.images[0].url}
@@ -56,7 +57,7 @@ function Main() {
                   }}
                 />
                 <h1 className="text-[16px] text-white">{el.name}</h1>
-                <h1>{el.id}</h1>
+
                 <span className="tetx-[12px]">{el.description}</span>
                 <div className="w-[182px] h-[182px]"></div>
               </div>

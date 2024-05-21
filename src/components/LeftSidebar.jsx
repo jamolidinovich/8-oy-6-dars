@@ -6,7 +6,7 @@ import like from "../assets/like.svg";
 import { Link } from "react-router-dom";
 function LeftSidebar() {
   return (
-    <div className="max-w-[17%] text-[#B2B2B2]  bg-black ">
+    <div className="w-[17%]  text-[#B2B2B2]  bg-black ">
       <div className="pt-20 pl-10 mr-[100px]">
         <p className="flex gap-5 mb-3 items-center transition duration-400 text-[#B2B2B2] hover:text-white">
           <img src={home} alt="" />
@@ -30,9 +30,9 @@ function LeftSidebar() {
         </p>
         <p className="flex gap-5 mb-3 items-center transition duration-400 text-[#B2B2B2] hover:text-white">
           <img src={like} alt="" />
-          <p className="flex gap-1">
+          <Link to={"/likes"} className="flex gap-1">
             Liked <span> </span> Songs
-          </p>
+          </Link>
         </p>
         <ul className="text-[16px] w-[241px] h-[515px] flex flex-col gap-3 mt-10 ">
           <li className="transition duration-400 text-[#B2B2B2] hover:text-white">

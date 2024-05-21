@@ -3,7 +3,7 @@ import ReightSidebar from "../components/ReightSidebar";
 
 function Layout({ children }) {
   return (
-    <div className="flex justify-between">
+    <div className="flex justify-between ">
       <LeftSidebar></LeftSidebar>
       {children}
       <ReightSidebar></ReightSidebar>

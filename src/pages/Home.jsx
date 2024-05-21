@@ -25,24 +25,24 @@
 //       });
 //   }, []);
 
-import Main from "../components/Main";
 
 //   if (error) {
-//     return <div>Error: {error.message}</div>;
-//   }
-
-//   if (!data) {
-//     return <div>Loading...</div>;
-//   }
-
-//   return <div></div>;
-// }
-
-// export default Home;
-
-function Home() {
-  return (
-    <div>
+  //     return <div>Error: {error.message}</div>;
+  //   }
+  
+  //   if (!data) {
+    //     return <div>Loading...</div>;
+    //   }
+    
+    //   return <div></div>;
+    // }
+    
+    // export default Home;
+    import Main from "../components/Main";
+    
+    function Home() {
+      return (
+        <div>
       <Main></Main>
     </div>
   );

@@ -6,6 +6,9 @@ import Musics from "./pages/Musics";
 import Layout from "./layouts/layout";
 import { getToken } from "./components/utils";
 function App() {
+  useEffect(() => {
+    getToken();
+  }, []);
   return (
     <div>
       <Routes>
