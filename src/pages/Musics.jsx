@@ -22,20 +22,20 @@ function Musics() {
     }
     setIsPlaying(!isPlaying);
   };
-  fetch(`${import.meta.env.VITE_API_MUSIC}playlists/${da.el.id}`, {
-    method: "GET",
-    headers: {
-      Authorization: `Bearer ${token}`,
-    },
-  })
-    .then((res) => res.json())
-    .then((data) => {
-      setData(data.tracks.items);
-      console.log(data.tracks.items[0].added_at);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
+  // fetch(`${import.meta.env.VITE_API_MUSIC}playlists/${da.el.id}`, {
+  //   method: "GET",
+  //   headers: {
+  //     Authorization: `Bearer ${token}`,
+  //   },
+  // })
+  //   .then((res) => res.json())
+  //   .then((data) => {
+  //     setData(data.tracks.items);
+  //     console.log(data.tracks.items[0].added_at);
+  //   })
+  //   .catch((err) => {
+  //     console.log(err);
+  //   });
   return (
     <div className=" w-[100%] mt-[-100px]  pt-[100px]  bg-gradient-to-b from-[#cade2f] from-2% via-[#8b8b3d] via-5% to-[#121212] to-40%  bg-[#121212] bg-100% ">
       <div
@@ -68,7 +68,7 @@ function Musics() {
           {isPlaying ? "Pause" : "Play"}
         </button>
 
-        <h3 key={index}>{data.tracks.items[0].added_at}</h3>
+        {/* <h3 key={index}>{data.tracks.items[0].added_at}</h3> */}
       </div>
     </div>
     // </div>
