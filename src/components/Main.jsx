@@ -20,7 +20,6 @@ function Main() {
       })
       .then((d) => {
         setData(d.playlists.items);
-        console.log(d);
       })
       .catch((err) => {
         setError(err);
@@ -37,7 +36,7 @@ function Main() {
   function handleMusic(id, el) {
     navigate(`/musics/${id}`, { state: { id: id, el } });
   }
-  console.log(data.collaborative);
+  // console.log(data.collaborative);
   return (
     <div className="relative">
       <div className=" ">
